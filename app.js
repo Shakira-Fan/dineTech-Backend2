@@ -6,11 +6,12 @@ const cors = require("cors");
 require("dotenv").config();
 
 // 資料庫設定開始
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 (async () => {
   try {
     await mongoose.connect(`${process.env.DB_HOST}${process.env.DB_NAME}`);
-  } catch (err) {}
+  } catch (err) {
+  }
 })();
 
 //本地端資料庫測試用
@@ -20,6 +21,7 @@ const mongoose = require("mongoose");
 //   } catch (err) {
 //   }
 // })();
+
 
 // 前台API Router Import
 const custMenuRouter = require("./front/routes/custMenu");
